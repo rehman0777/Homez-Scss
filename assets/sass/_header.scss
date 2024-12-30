@@ -1,0 +1,82 @@
+@use './abstracts/mixins' as *;
+@use './abstracts/variables' as *;
+header {
+    width: 100%;
+    position: fixed;
+}
+
+.navbar {
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    align-items: center;
+
+    .hamburger{
+        display: none;
+    }
+
+   > ul {
+        display: flex;
+        gap: 50px;
+       
+        >li {
+            position: relative;
+            height: fit-content;
+
+            >a {
+                @include typography(14px, 26px, 600, left);
+                color: $white-clr;
+            }
+            &::after{
+                content: "";
+                background-color: $white-clr;
+                width: 5px;
+                height: 3px;
+                display: inline-block;
+                margin: 0px 0px 2px 5px;
+            }
+            &:hover .dropdown-content {
+                    display: block;
+                
+            }
+        }
+    }
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #050038;
+    min-width: 160px;
+    z-index: 1;
+    padding: 20px 20px 0px 20px;
+    border-radius: 10px;
+
+    li {
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #FFFFFF;
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+}
+
+.header_buttons{
+    display: flex;
+    gap: 20px;
+
+    .account_mange{
+        display: flex;
+        gap: 10px;
+    }
+}

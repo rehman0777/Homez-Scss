@@ -1,0 +1,8 @@
+@use './abstracts/mixins';
+
+.heroSection{
+    background: url(../public/images/heroSection.png);
+    width: 100%;
+    height: 100vh;
+    @include mixins.backgroundImage();
+}
