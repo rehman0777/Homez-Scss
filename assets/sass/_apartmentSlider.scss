@@ -1,0 +1,31 @@
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
+
+.apartment_slider {
+  .title {
+    justify-content: space-between;
+  }
+
+  .item {
+    margin-bottom: 40px;
+
+    .item_main {
+      width: 90%;
+      border-radius: $border-radius;
+      z-index: 999;
+      overflow: hidden;
+      box-shadow: 0px 10px 20px 0px #181a200d;
+
+      .item_img {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .item_text {
+        background-color: $white-clr;
+        padding: 15px;
+      }
+    }
+  }
+}

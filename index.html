@@ -1,363 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sass Landing Page</title>
 
     <!-- ------------------ Font Awesome Icon ---------------------  -->
     <link rel="stylesheet" href="./assets/public/icons/fontawesome-free-6.7.1-web/css/all.min.css" />
 
     <!-- ------------------ Font -----------------  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- --------------- Slick Slider ---------  -->
     <link rel="stylesheet" type="text/css" href="./assets/slick-1.8.1/slick/slick.css" />
 
     <link rel="stylesheet" type="text/css" href="./assets/slick-1.8.1/slick/slick-theme.css" />
     <!-- --------------- style sheet -------------  -->
-    <link rel="stylesheet" href="./assets/sass/style.css">
-</head>
+    <link rel="stylesheet" href="./assets/sass/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#"><img src="./assets/public/images/logo.png" alt="Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li class="dropdown"><a href="/index.html">Listings</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Houses</a></li>
-                        <li><a href="#">Apartments</a></li>
-                        <li><a href="#">Offices</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="/index.html">Members</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Amazon</a></li>
-                        <li><a href="#">Dropcam</a></li>
-                        <li><a href="#">Logitech</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="/index.html">Blog</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Design</a></li>
-                        <li><a href="#">Location</a></li>
-                        <li><a href="#">Stuctures </a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="/index.html">Pages</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Pricing Plans</a></li>
-                        <li><a href="#">Our Services</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </li>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#"><img src="./assets/public/images/logo.png" alt="Logo" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="/index.html">Listings</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Houses</a></li>
+              <li><a href="#">Apartments</a></li>
+              <li><a href="#">Offices</a></li>
             </ul>
-            <div class="header_buttons">
-                <div class="account_mange">
-                    <div class="user_img"><i class="fa-regular fa-circle-user"></i></div>
-                    <div class="signIn">
-                        <a href="/index.html">Login</a>
-                        <span>/</span>
-                        <a href="/index.html">Register</a>
-                    </div>
-                </div>
-                <button>Add Property <span>&#8599;</span></button>
+          </li>
+          <li class="dropdown">
+            <a href="/index.html">Members</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Amazon</a></li>
+              <li><a href="#">Dropcam</a></li>
+              <li><a href="#">Logitech</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/index.html">Blog</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Location</a></li>
+              <li><a href="#">Stuctures </a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/index.html">Pages</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Pricing Plans</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header_buttons">
+          <div class="account_mange">
+            <div class="user_img"><i class="fa-regular fa-circle-user"></i></div>
+            <div class="signIn">
+              <a href="/index.html">Login</a>
+              <span>/</span>
+              <a href="/index.html">Register</a>
             </div>
-            <div class="hamburger" id="hamburger">
-                <span>&#9776;</span>
-            </div>
-        </nav>
+          </div>
+          <button>Add Property <span>&#8599;</span></button>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span>&#9776;</span>
+        </div>
+      </nav>
     </header>
     <main>
-        <!-- -------------- HERO SEC ------------  -->
+      <!-- -------------- HERO SEC ------------  -->
 
-        <section class="heroSection">
-            <div class="container">
-                <div class="tabs">
-                    <div class="tab-list">
-                        <div class="tab" id="all-tab">All</div>
-                        <div class="tab muted" id="sale-tab">For Sale</div>
-                        <div class="tab muted" id="rent-tab">For Rent</div>
-                    </div>
-
-                    <div class="tab-content" id="all-content">
-                        <!-- All Content: Search Form -->
-                        <div class="search-form search">
-                            <div class="search-box">
-                                <label for="search">Search</label>
-                                <input type="text" id="search" placeholder="Enter keywords" />
-                            </div>
-                            <div class="select-box select-type">
-                                <label for="looking-for">Looking For</label>
-                                <select id="looking-for">
-                                    <option value="city1">Type</option>
-                                    <option value="office">Office</option>
-                                    <option value="apartment">Apartment</option>
-                                    <option value="house">House</option>
-                                </select>
-                            </div>
-                            <div class="select-box select-location">
-                                <label for="location">Location</label>
-                                <select id="location">
-                                    <option value="city1">Location</option>
-                                    <option value="city1">City 1</option>
-                                    <option value="city2">City 2</option>
-                                    <option value="city3">City 3</option>
-                                </select>
-                            </div>
-                            <div class="price-box">
-                                <label for="price">Price</label>
-                                <div class="price_range">
-                                    <input type="text" id="min-price" placeholder="$0" />
-                                    <span>-</span>
-                                    <input type="text" id="max-price" placeholder="$5000" />
-                                </div>
-                            </div>
-                            <div class="advanced">
-                                <span class="muted-text">
-                                    <i class="fa-solid fa-bars"></i>
-                                    Advanced
-                                </span>
-                            </div>
-                            <button class="search-btn">
-                                <span><i class="fa-solid fa-magnifying-glass search-icon"></i>Search</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="tab-content muted" id="sale-content">
-                        <!-- For Sale Content -->
-                        <p>For Sale content goes here...</p>
-                        <p>For Sale content goes here...</p>
-                        <p>For Sale content goes here...</p>
-                    </div>
-
-                    <div class="tab-content muted" id="rent-content">
-                        <!-- For Rent Content -->
-                        <p>For Rent content goes here...</p>
-                        <p>For Rent content goes here...</p>
-                        <p>For Rent content goes here...</p>
-                    </div>
-                </div>
-
+      <section class="heroSection">
+        <div class="container">
+          <div class="tabs">
+            <div class="tab-list">
+              <div class="tab" id="all-tab">All</div>
+              <div class="tab muted" id="sale-tab">For Sale</div>
+              <div class="tab muted" id="rent-tab">For Rent</div>
             </div>
-        </section>
 
-        <!-- -------------- FEATURED LISTING ------------  -->
-        <section class="featured_Listings">
-            <div class="container">
-                <div class="title">
-                    <div class="title_text">
-                        <h1>Discover Our Featured Listings</h1>
-                        <p>Aliquam lacinia diam quis lacus euismod</p>
-                    </div>
-                    <a href="#">See All Properties <span>&#8599;</span></a>
+            <div class="tab-content" id="all-content">
+              <!-- All Content: Search Form -->
+              <div class="search-form search">
+                <div class="search-box">
+                  <label for="search">Search</label>
+                  <input type="text" id="search" placeholder="Enter keywords" />
                 </div>
-                <div class="featured_listing_slider_main">
-                    <div class="featured_listing_slider">
-                        <div class="card">
-                            <div class="card_main">
-                                <div class="card_img">
-                                    <img src="./assets/public/images/p2-570x370.jpg.png" alt="Featured Listing">
-                                    <p>Featured</p>
-                                </div>
-                                <div class="card_text">
-                                    <h3>House on the Hollywood</h3>
-                                    <span>$4,600</span>
-                                </div>
-                            </div>
-                        </div>
-                      
-                            <div class="card">
-                                <div class="card_main">
-                                    <div class="card_img">
-                                        <img src="./assets/public/images/p6-570x370.jpg.png" alt="Featured Listing">
-                                        <p>Featured</p>
-                                    </div>
-                                    <div class="card_text">
-                                        <h3>Comfortable Villa Green</h3>
-                                        <span>$5,800</span>
-                                    </div>
-                                </div>
-                            </div>
-                      
-                     
-                            <div class="card">
-                                <div class="card_main">
-                                    <div class="card_img">
-                                        <img src="./assets/public/images/p9-570x370.jpg.png" alt="Featured Listing">
-                                        <p>Featured</p>
-                                    </div>
-                                    <div class="card_text">
-                                        <h3>Quality House For Sale</h3>
-                                        <span>$2,500</span>
-                                    </div>
-                                </div>
-                            </div>
-                 
-                     
-                            <div class="card">
-                                <div class="card_main">
-                                    <div class="card_img">
-                                        <img src="./assets/public/images/p2-570x370.jpg.png" alt="Featured Listing">
-                                        <p>Featured</p>
-                                    </div>
-                                    <div class="card_text">
-                                        <h3>House on the Hollywood</h3>
-                                        <span>$4,600</span>
-                                    </div>
-                                </div>
-                            </div>
-                      
-                    </div>
+                <div class="select-box select-type">
+                  <label for="looking-for">Looking For</label>
+                  <select id="looking-for">
+                    <option value="city1">Type</option>
+                    <option value="office">Office</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                  </select>
                 </div>
+                <div class="select-box select-location">
+                  <label for="location">Location</label>
+                  <select id="location">
+                    <option value="city1">Location</option>
+                    <option value="city1">City 1</option>
+                    <option value="city2">City 2</option>
+                    <option value="city3">City 3</option>
+                  </select>
+                </div>
+                <div class="price-box">
+                  <label for="price">Price</label>
+                  <div class="price_range">
+                    <input type="text" id="min-price" placeholder="$0" />
+                    <span>-</span>
+                    <input type="text" id="max-price" placeholder="$5000" />
+                  </div>
+                </div>
+                <div class="advanced">
+                  <span class="muted-text">
+                    <i class="fa-solid fa-bars"></i>
+                    Advanced
+                  </span>
+                </div>
+                <button class="search-btn">
+                  <span><i class="fa-solid fa-magnifying-glass search-icon"></i>Search</span>
+                </button>
+              </div>
             </div>
-        </section>
 
-        <!-- -------------- APARTMENT TYPES ------------  -->
-         <section class="apartment_types">
-            <div class="container">
-                <div class="title">
-                    <div class="title_text">
-                        <h1>Explore Apartment Types</h1>
-                        <p>Aliquam lacinia diam quis lacus euismod</p>
-                    </div>
-                </div>
-                <div class="apartment_types_main">
-                    <div class="image-column">
-                        <div class="house">
-                            <img src="./assets/public/images/type1.jpg.png" alt="House Image" class="house-image">
-                            
-                            <div class="text-content">
-                                <h3>House</h3>
-                                <p>7 Properties</p>
-                            </div>
-                        </div>
-                        
-                        <div class="image-row">
-                          <div class="partOne">
-                            <div class="house">
-                                <img src="./assets/public/images/type4.jpg.png" alt="House Image" class="house-image">
-                                
-                                <div class="text-content">
-                                    <h3>Townhome</h3>
-                                    <p>2 Properties</p>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="partOne">
-                            <div class="house">
-                                <img src="./assets/public/images/type5.jpg.png" alt="House Image" class="house-image">
-                                
-                                <div class="text-content">
-                                    <h3>Villa</h3>
-                                    <p>4 Properties</p>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                      <div class="image-column">
-                        <div class="image-row">
-                            <div class="partOne">
-                                <div class="house">
-                                    <img src="./assets/public/images/type2.jpg.png" alt="House Image" class="house-image">
-                                    
-                                    <div class="text-content">
-                                        <h3>Apartments</h3>
-                                        <p>3 Properties</p>
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="partOne">
-                                <div class="house">
-                                    <img src="./assets/public/images/type3.jpg.png" alt="House Image" class="house-image">
-                                    
-                                    <div class="text-content">
-                                        <h3>Office</h3>
-                                        <p>4 Properties</p>
-                                    </div>
-                                </div>
-                              </div>
-                        </div>
-
-                        <div class="house">
-                            <img src="./assets/public/images/type6.jpg.png" alt="House Image" class="house-image">
-                            
-                            <div class="text-content">
-                                <h3>Bungalow</h3>
-                                <p>1 Properties</p>
-                            </div>
-                        </div>
-                      </div>
-                </div>
+            <div class="tab-content muted" id="sale-content">
+              <!-- For Sale Content -->
+              <p>For Sale content goes here...</p>
+              <p>For Sale content goes here...</p>
+              <p>For Sale content goes here...</p>
             </div>
-         </section>
 
-         <!-- -------------- CUSTORMER SECTION ------------  -->
-
-         <section class="customer_sec">
-            <div class="container">
-                <div class="title">
-                    <div class="title_text">
-                        <h1>See how Realtor can help</h1>
-                        <p>Aliquam lacinia diam quis lacus euismod</p>
-                    </div>
-                </div>
-                <div class="customer_cards">
-                    <div class="card">
-                        <div class="card_img">
-                            <img src="./assets/public/images/icon.png" alt="">
-                        </div>
-                        <div class="card_text">
-                            <h2>Buy a property</h2>
-                            <p>Nullam sollicitudin blandit eros eu pretium. 
-                                
-                            </p>
-                            <p>Nullam maximus ultricies auctor.</p>
-                        </div>
-                        <button>Find a home<span>&#8599;</span></button>
-                    </div>
-                    <div class="card">
-                        <div class="card_img">
-                            <img src="./assets/public/images/icon2.png" alt="">
-                        </div>
-                        <div class="card_text">
-                            <h2>Sell a property</h2>
-                            <p>Nullam sollicitudin blandit eros eu pretium. 
-                                
-                            </p>
-                            <p>Nullam maximus ultricies auctor.</p>
-                        </div>
-                        <button>Place an ad<span>&#8599;</span></button>
-                    </div>
-                    <div class="card">
-                        <div class="card_img">
-                            <img src="./assets/public/images/icon3.png" alt="">
-                        </div>
-                        <div class="card_text">
-                            <h2>Rent a property</h2>
-                            <p>Nullam sollicitudin blandit eros eu pretium. 
-                                
-                            </p>
-                            <p>Nullam maximus ultricies auctor.</p>
-                        </div>
-                        <button>Find a rental<span>&#8599;</span></button>
-                    </div>
-                </div>
+            <div class="tab-content muted" id="rent-content">
+              <!-- For Rent Content -->
+              <p>For Rent content goes here...</p>
+              <p>For Rent content goes here...</p>
+              <p>For Rent content goes here...</p>
             </div>
-         </section>
+          </div>
+        </div>
+      </section>
 
+      <!-- -------------- FEATURED LISTING ------------  -->
+      <section class="featured_Listings">
+        <div class="container">
+          <div class="title">
+            <div class="title_text">
+              <h1>Discover Our Featured Listings</h1>
+              <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+            <a href="#">See All Properties <span>&#8599;</span></a>
+          </div>
+          <div class="featured_listing_slider_main">
+            <div class="featured_listing_slider">
+              <div class="card">
+                <div class="card_main">
+                  <div class="card_img">
+                    <img src="./assets/public/images/p2-570x370.jpg.png" alt="Featured Listing" />
+                    <p>Featured</p>
+                  </div>
+                  <div class="card_text">
+                    <h3>House on the Hollywood</h3>
+                    <span>$4,600</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card_main">
+                  <div class="card_img">
+                    <img src="./assets/public/images/p6-570x370.jpg.png" alt="Featured Listing" />
+                    <p>Featured</p>
+                  </div>
+                  <div class="card_text">
+                    <h3>Comfortable Villa Green</h3>
+                    <span>$5,800</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card_main">
+                  <div class="card_img">
+                    <img src="./assets/public/images/p9-570x370.jpg.png" alt="Featured Listing" />
+                    <p>Featured</p>
+                  </div>
+                  <div class="card_text">
+                    <h3>Quality House For Sale</h3>
+                    <span>$2,500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card_main">
+                  <div class="card_img">
+                    <img src="./assets/public/images/p2-570x370.jpg.png" alt="Featured Listing" />
+                    <p>Featured</p>
+                  </div>
+                  <div class="card_text">
+                    <h3>House on the Hollywood</h3>
+                    <span>$4,600</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- APARTMENT TYPES ------------  -->
+      <section class="apartment_types">
+        <div class="container">
+          <div class="title">
+            <div class="title_text">
+              <h1>Explore Apartment Types</h1>
+              <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+          </div>
+          <div class="apartment_types_main">
+            <div class="image-column">
+              <div class="house">
+                <img src="./assets/public/images/type1.jpg.png" alt="House Image" class="house-image" />
+
+                <div class="text-content">
+                  <h3>House</h3>
+                  <p>7 Properties</p>
+                </div>
+              </div>
+
+              <div class="image-row">
+                <div class="partOne">
+                  <div class="house">
+                    <img src="./assets/public/images/type4.jpg.png" alt="House Image" class="house-image" />
+
+                    <div class="text-content">
+                      <h3>Townhome</h3>
+                      <p>2 Properties</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="partOne">
+                  <div class="house">
+                    <img src="./assets/public/images/type5.jpg.png" alt="House Image" class="house-image" />
+
+                    <div class="text-content">
+                      <h3>Villa</h3>
+                      <p>4 Properties</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-column">
+              <div class="image-row">
+                <div class="partOne">
+                  <div class="house">
+                    <img src="./assets/public/images/type2.jpg.png" alt="House Image" class="house-image" />
+
+                    <div class="text-content">
+                      <h3>Apartments</h3>
+                      <p>3 Properties</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="partOne">
+                  <div class="house">
+                    <img src="./assets/public/images/type3.jpg.png" alt="House Image" class="house-image" />
+
+                    <div class="text-content">
+                      <h3>Office</h3>
+                      <p>4 Properties</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="house">
+                <img src="./assets/public/images/type6.jpg.png" alt="House Image" class="house-image" />
+
+                <div class="text-content">
+                  <h3>Bungalow</h3>
+                  <p>1 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- CUSTORMER SECTION ------------  -->
+
+      <section class="customer_sec">
+        <div class="container">
+          <div class="title">
+            <div class="title_text">
+              <h1>See how Realtor can help</h1>
+              <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+          </div>
+          <div class="customer_cards">
+            <div class="card">
+              <div class="card_img">
+                <img src="./assets/public/images/icon.png" alt="" />
+              </div>
+              <div class="card_text">
+                <h2>Buy a property</h2>
+                <p>Nullam sollicitudin blandit eros eu pretium.</p>
+                <p>Nullam maximus ultricies auctor.</p>
+              </div>
+              <button>Find a home<span>&#8599;</span></button>
+            </div>
+            <div class="card">
+              <div class="card_img">
+                <img src="./assets/public/images/icon2.png" alt="" />
+              </div>
+              <div class="card_text">
+                <h2>Sell a property</h2>
+                <p>Nullam sollicitudin blandit eros eu pretium.</p>
+                <p>Nullam maximus ultricies auctor.</p>
+              </div>
+              <button>Place an ad<span>&#8599;</span></button>
+            </div>
+            <div class="card">
+              <div class="card_img">
+                <img src="./assets/public/images/icon3.png" alt="" />
+              </div>
+              <div class="card_text">
+                <h2>Rent a property</h2>
+                <p>Nullam sollicitudin blandit eros eu pretium.</p>
+                <p>Nullam maximus ultricies auctor.</p>
+              </div>
+              <button>Find a rental<span>&#8599;</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- APARTMENT SLIDER SECTION ------------  -->
+
+      <section class="apartment_slider">
+        <div class="container">
+          <div class="title">
+            <div class="title_text">
+              <h1>Explore Apartment Types</h1>
+              <p>Lorem ipsum dolor sit amet,</p>
+            </div>
+            <a href="#">All Types <span>&#8599;</span></a>
+          </div>
+          <div class="apartment_slider_main">
+            <div class="item">
+              <div class="item_main">
+                <div class="item_img">
+                  <img src="./assets/public/images/h4-t1.jpg.png" alt="" />
+                </div>
+                <div class="item_text">
+                  <h3>House</h3>
+                  <p>7 Properties</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item_main">
+                <div class="item_img">
+                  <img src="./assets/public/images/h4-t2.jpg.png" alt="" />
+                </div>
+                <div class="item_text">
+                  <h3>Aoartments</h3>
+                  <p>3 Properties</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item_main">
+                <div class="item_img">
+                  <img src="./assets/public/images/h4-t3.jpg.png" alt="" />
+                </div>
+                <div class="item_text">
+                  <h3>Office</h3>
+                  <p>4 Properties</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item_main">
+                <div class="item_img">
+                  <img src="./assets/public/images/h4-t4.jpg.png" alt="" />
+                </div>
+                <div class="item_text">
+                  <h3>Villa</h3>
+                  <p>4 Properties</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item_main">
+                <div class="item_img">
+                  <img src="./assets/public/images/h4-t5.jpg.png" alt="" />
+                </div>
+                <div class="item_text">
+                  <h3>Townhome</h3>
+                  <p>2 Properties</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item_main">
+                <div class="item_img">
+                  <img src="./assets/public/images/h4-t3.jpg.png" alt="" />
+                </div>
+                <div class="item_text">
+                  <h3>Villa</h3>
+                  <p>7 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- banner SECTION start   ------------  -->
+
+      <section class="banner_section">
+        <div class="container">
+          <div class="banner_main">
+            <p>BUY OR SELL</p>
+            <h1>Looking to Buy a new property or sell an existing one? Homez provides an awesome solution!</h1>
+            <div class="banner_btns">
+              <button class="submit_btn">Submit Property <span>&#8599;</span></button>
+              <button class="browser_btn">Browser Properties <span>&#8599;</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- Client Review SECTION start   ------------  -->
+
+      <section class="client_reviews">
+        <div class="container">
+          <div class="title">
+            <div class="title_text">
+              <h1>People Love Living with Realtor</h1>
+              <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+          </div>
+          <div class="client_reviews_slider">
+            <div class="client_reviews_slider_main">
+              <div class="user_item">
+                <div class="user_item_main">
+                  <span class="qoute">
+                    <i class="fa-solid fa-quote-left"></i>
+                  </span>
+                  <div class="user">
+                    <div class="user_img">
+                      <img src="./assets/public/images/user2.png" alt="client" />
+                    </div>
+                    <div class="user_name">
+                      <h4>Ali Tufan</h4>
+                      <p>Marketing</p>
+                    </div>
+                  </div>
+                  <div class="user_review">
+                    <p>
+                      “At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                      deleniti atque corrupti ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="user_item">
+                <div class="user_item_main">
+                  <span class="qoute">
+                    <i class="fa-solid fa-quote-left"></i>
+                  </span>
+                  <div class="user">
+                    <div class="user_img">
+                      <img src="./assets/public/images/user1.png" alt="client" />
+                    </div>
+                    <div class="user_name">
+                      <h4>Albert Flores</h4>
+                      <p>Designer</p>
+                    </div>
+                  </div>
+                  <div class="user_review">
+                    <p>
+                      “Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                      totam rem aperiam, eaque ipsa quae”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="user_item">
+                <div class="user_item_main">
+                  <span class="qoute">
+                    <i class="fa-solid fa-quote-left"></i>
+                  </span>
+                  <div class="user">
+                    <div class="user_img">
+                      <img src="./assets/public/images/user.png" alt="client" />
+                    </div>
+                    <div class="user_name">
+                      <h4>Robert Fox</h4>
+                      <p>Developer</p>
+                    </div>
+                  </div>
+                  <div class="user_review">
+                    <p>
+                      “Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+                      est eligendi optio cumque nihil impedit”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="user_item">
+                <div class="user_item_main">
+                  <span class="qoute">
+                    <i class="fa-solid fa-quote-left"></i>
+                  </span>
+                  <div class="user">
+                    <div class="user_img">
+                      <img src="./assets/public/images/user2.png" alt="client" />
+                    </div>
+                    <div class="user_name">
+                      <h4>Ali Tufan</h4>
+                      <p>Marketing</p>
+                    </div>
+                  </div>
+                  <div class="user_review">
+                    <p>
+                      “At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                      deleniti atque corrupti ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <!-- ---------------------------- Script Start ---------------------------  -->
     <!-- -------------- jquery start --------------  -->
@@ -367,6 +562,5 @@
     <script type="text/javascript" src="./assets/slick-1.8.1/slick/slick.min.js"></script>
 
     <script src="./assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

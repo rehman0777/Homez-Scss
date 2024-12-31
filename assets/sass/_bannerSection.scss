@@ -1,0 +1,39 @@
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
+
+
+.banner_section{
+    background: url(../public/images/banner.png);
+    @include backgroundImage();
+    padding: 180px 0px;
+    .banner_main{
+        width: 80%;
+        margin: 0px auto;
+        text-align: center;
+
+        p{
+            text-align: center;
+            color: $white-clr;
+            font-weight: 400;
+        }
+        h1{
+            color: $white-clr;
+            line-height: 48px;
+        }
+        .banner_btns{
+            margin-top: 20px;
+            gap: 20px;
+            display: flex;
+            justify-content: center;
+
+            .submit_btn{
+                @include fill_Button()
+            }
+            .browser_btn{
+                @include fill_Button( $black-clr, $white-clr, $white-clr, $black-clr, $bg-clr, $bg-clr,)
+            }
+
+        }
+    }
+    
+}
