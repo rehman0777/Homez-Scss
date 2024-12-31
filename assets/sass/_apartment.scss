@@ -1,0 +1,103 @@
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
+
+
+
+.apartment_types {
+    .title {
+        .title_text {
+            P {
+                text-align: center;
+            }
+        }
+    }
+
+    .apartment_types_main {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        .image-column {
+            display: grid;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            width: 49%;
+
+            .house {
+                position: relative;
+                width: 100%;
+                height: 260px;
+                overflow: hidden;
+                display: flex;
+                align-items: flex-end;
+
+                &:hover:before {
+                    opacity: 1;
+                }
+
+                &:hover .text-content {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: $border-radius;
+                    background: linear-gradient(180deg, #1A1C21 0%, rgba(0, 0, 0, 0) 100%);
+                    z-index: 2;
+                    transition: 0.5s;
+                    opacity: 0;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .text-content {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    z-index: 3;
+                    color: white;
+                    opacity: 0;
+                    transform: translateY(260px);
+                    transition: 0.5s;
+
+                    h3 {
+                        color: $white-clr;
+                    }
+
+                    p {
+                        color: $white-clr;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .image-row {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                .partOne {
+                    width: 48%;
+                }
+            }
+
+        }
+
+    }
+
+
+
+}

@@ -1,0 +1,58 @@
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
+
+
+.featured_Listings{
+    background-color: $bg-clr;
+    padding: 150px 0px 60px 0px;
+    .title{
+        justify-content: space-between;
+
+        a{
+            @include typography(15px, 28px,);
+            color: $black-clr;
+    
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .card{
+        margin-bottom: 30px;
+        .card_main{
+            width: 95%;
+            border-radius: $border-radius;
+            z-index: 999;
+            overflow: hidden;
+
+            .card_img{
+                position: relative;
+                img{
+                    width: 100%;
+                }
+                p{
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    @include typography();
+                    background-color: $pink-clr;
+                    color: $white-clr;
+                    border-radius: $border-radius - 6;
+                    padding: 0px 20px;
+                    text-transform: uppercase;
+                }
+            }
+            .card_text{
+                background-color: $white-clr;
+                padding: 15px;
+
+                span{
+                    color: $pink-clr;
+                    @include typography(15px, 30px,)
+                }
+            }
+           
+        }
+
+    }
+}

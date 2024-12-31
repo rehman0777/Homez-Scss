@@ -3,7 +3,16 @@
 header {
     width: 100%;
     position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: transparent; 
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    
 }
+.scrolled {
+    background-color: rgba(31, 30, 30, 0.651);
+}
+
 
 .navbar {
     width: 80%;
@@ -28,6 +37,10 @@ header {
             >a {
                 @include typography(14px, 26px, 600, left);
                 color: $white-clr;
+                
+                &:hover{
+                    border-bottom: 1px solid $white-clr;
+                }
             }
             &::after{
                 content: "";
@@ -38,8 +51,7 @@ header {
                 margin: 0px 0px 2px 5px;
             }
             &:hover .dropdown-content {
-                    display: block;
-                
+                    display: block; 
             }
         }
     }
@@ -49,34 +61,64 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #050038;
+    background-color: $pink-clr;
     min-width: 160px;
     z-index: 1;
-    padding: 20px 20px 0px 20px;
-    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    border-radius: $border-radius;
 
     li {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 
     a {
-        color: #FFFFFF;
-        font-family: Helvetica;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: center;
-        text-decoration: none;
+        color: $white-clr;
+        @include typography();
+        &:hover{
+           border-bottom: 1px solid $white-clr;
+            transition: .5s;    
+        }
     }
+   
 
 }
 
 .header_buttons{
     display: flex;
+    align-items: center;
     gap: 20px;
 
     .account_mange{
         display: flex;
         gap: 10px;
+        .user_img{
+            color: $white-clr;
+        }
+        .signIn{
+            @include typography ();
+            color: $white-clr;
+            a{
+                color: $white-clr;
+                &:hover{
+                    border-bottom: 1px solid $white-clr;
+                 }
+            }
+        }
+    }
+    button{
+        @include fill_Button($black-clr, $white-clr, $white-clr,);
+        @include typography();
+        display: flex;
+        align-items: center;
+        span{
+            margin-left: 2px;
+            color: $black-clr;   
+            font-size: 20px;
+        }
+        &:hover {
+            span {
+                color: $white-clr; 
+            }
+        }
     }
 }
