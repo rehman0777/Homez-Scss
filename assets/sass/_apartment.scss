@@ -16,12 +16,20 @@
         display: flex;
         justify-content: space-between;
         margin-top: 50px;
+        flex-wrap: wrap;
+        gap: 0px;
+        @media (max-width: 768px) {
+            gap: 20px;
+    }
 
         .image-column {
             display: grid;
             grid-template-rows: auto auto;
             gap: 20px;
             width: 49%;
+            @media (max-width: 768px) {
+                    width: 100%;
+            }
 
             .house {
                 position: relative;
@@ -88,9 +96,18 @@
                 display: flex;
                 width: 100%;
                 justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 0px;
+                @media (max-width: 425px) {
+                    gap: 20px;
+            }
 
                 .partOne {
                     width: 48%;
+
+                    @media (max-width: 425px) {
+                        width: 100%;
+                }
                 }
             }
 

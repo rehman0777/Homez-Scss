@@ -1,10 +1,17 @@
 // ===================== HAMBURGER START ========================
 
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.querySelector(".nav-links");
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebar');
+const closeSidebar = document.getElementById('close-sidebar');
+
+hamburger.addEventListener('click', () => {
+  sidebar.style.right = '0'; 
 });
+
+closeSidebar.addEventListener('click', () => {
+  sidebar.style.right = '-250px'; 
+});
+
 
 // ===================== Tabs START ========================
 
@@ -49,6 +56,31 @@ $(".featured_listing_slider").slick({
   slidesToScroll: 1,
   dots: true,
   arrows: false,
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 
 // =====================  Apartment Slider START ========================
@@ -59,6 +91,31 @@ $(".apartment_slider_main").slick({
   slidesToScroll: 1,
   dots: true,
   arrows: false,
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 
 // =====================  Client Reviews Slider START ========================
@@ -68,4 +125,85 @@ $(".client_reviews_slider_main").slick({
   slidesToScroll: 1,
   dots: true,
   arrows: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+// =====================  Best DEAL SECTION TABS START ========================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".tab_button");
+  const tabContents = document.querySelectorAll(".tab_content");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+      buttons.forEach(item => item.classList.remove("active"));
+      tabContents.forEach(content => content.classList.remove("active"));
+
+      button.classList.add("active");
+      const activeTab = button.getAttribute("data-tab");
+      document.getElementById(activeTab).classList.add("active");
+    });
+  });
+
+  document.querySelector(".tab_button[data-tab='for_rent']").classList.add("active");
+  document.getElementById("for_rent").classList.add("active");
+});
+
+
+// ================ Brand Slider start =================
+
+$('.brand_slider_main').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 500,
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });

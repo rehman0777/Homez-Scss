@@ -8,12 +8,18 @@
     .title{
         justify-content: space-between;
 
-        a{
-            @include typography(15px, 28px,);
-            color: $black-clr;
-    
-            &:hover{
-                text-decoration: underline;
+        .title_text{
+            p,
+            h1{
+                text-align: left
+            }
+            a{
+                @include typography(15px, 28px,);
+                color: $black-clr;
+        
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -56,3 +62,26 @@
 
     }
 }
+
+@media (max-width: 768px) {
+    .featured_Listings{
+        .title{
+            flex-direction: column;
+            align-items: center;
+            .title_text {
+                p,h1{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .featured_Listings {
+        .card{
+            .card_main {
+               width: 100%;
+            }
+        }
+    }
+  }

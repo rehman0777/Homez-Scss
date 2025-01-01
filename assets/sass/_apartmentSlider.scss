@@ -4,6 +4,13 @@
 .apartment_slider {
   .title {
     justify-content: space-between;
+
+    .title_text{
+      p,
+      h1{
+          text-align: left
+      }
+  }
   }
 
   .item {
@@ -27,5 +34,29 @@
         padding: 15px;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .apartment_slider{
+      .title{
+          flex-direction: column;
+          align-items: center;
+          .title_text {
+              p,h1{
+                  text-align: center;
+              }
+          }
+      }
+  }
+}
+
+@media (max-width: 600px) {
+  .apartment_slider{
+      .item{
+          .item_main {
+             width: 100%;
+          }
+      }
   }
 }

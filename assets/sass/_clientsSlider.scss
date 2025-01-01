@@ -61,3 +61,12 @@
         }
     }
 }
+@media (max-width: 600px) {
+    .client_reviews {
+        .user_item{
+            .user_item_main {
+               width: 100%;
+            }
+        }
+    }
+  }

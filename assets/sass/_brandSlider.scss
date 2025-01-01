@@ -1,0 +1,21 @@
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
+
+
+.brand_slider_sec{
+    padding-top: 30px;
+    .title_text{
+        p{
+            text-align: center;
+        }
+    }
+    .brand_slider{
+        margin-top: 60px;
+        overflow: hidden;
+        .brand_logo{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+}

@@ -27,40 +27,40 @@
     <header>
       <nav class="navbar">
         <div class="logo">
-          <a href="#"><img src="./assets/public/images/logo.png" alt="Logo" /></a>
+          <a href="javascript:void(0);"><img src="./assets/public/images/logo.png" alt="Logo" /></a>
         </div>
         <ul class="nav-links">
-          <li><a href="/index.html">Home</a></li>
+          <li><a href="javascript:void(0);">Home</a></li>
           <li class="dropdown">
-            <a href="/index.html">Listings</a>
+            <a href="javascript:void(0);">Listings</a>
             <ul class="dropdown-content">
-              <li><a href="#">Houses</a></li>
-              <li><a href="#">Apartments</a></li>
-              <li><a href="#">Offices</a></li>
+              <li><a href="javascript:void(0);">Houses</a></li>
+              <li><a href="javascript:void(0);">Apartments</a></li>
+              <li><a href="javascript:void(0);">Offices</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="/index.html">Members</a>
+            <a href="javascript:void(0);">Members</a>
             <ul class="dropdown-content">
-              <li><a href="#">Amazon</a></li>
-              <li><a href="#">Dropcam</a></li>
-              <li><a href="#">Logitech</a></li>
+              <li><a href="javascript:void(0);">Amazon</a></li>
+              <li><a href="javascript:void(0);">Dropcam</a></li>
+              <li><a href="javascript:void(0);">Logitech</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="/index.html">Blog</a>
+            <a href="javascript:void(0);">Blog</a>
             <ul class="dropdown-content">
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Location</a></li>
-              <li><a href="#">Stuctures </a></li>
+              <li><a href="javascript:void(0);">Design</a></li>
+              <li><a href="javascript:void(0);">Location</a></li>
+              <li><a href="javascript:void(0);">Structures</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="/index.html">Pages</a>
+            <a href="javascript:void(0);">Pages</a>
             <ul class="dropdown-content">
-              <li><a href="#">Pricing Plans</a></li>
-              <li><a href="#">Our Services</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="javascript:void(0);">Pricing Plans</a></li>
+              <li><a href="javascript:void(0);">Our Services</a></li>
+              <li><a href="javascript:void(0);">Careers</a></li>
             </ul>
           </li>
         </ul>
@@ -68,9 +68,9 @@
           <div class="account_mange">
             <div class="user_img"><i class="fa-regular fa-circle-user"></i></div>
             <div class="signIn">
-              <a href="/index.html">Login</a>
+              <a href="javascript:void(0);">Login</a>
               <span>/</span>
-              <a href="/index.html">Register</a>
+              <a href="javascript:void(0);">Register</a>
             </div>
           </div>
           <button>Add Property <span>&#8599;</span></button>
@@ -79,7 +79,61 @@
           <span>&#9776;</span>
         </div>
       </nav>
+    
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+          <div class="close-btn" id="close-sidebar">&times;</div>
+          <ul class="sidebar-nav">
+            <li><a href="javascript:void(0);">Home</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0);">Listings</a>
+              <ul class="dropdown-content">
+                <li><a href="javascript:void(0);">Houses</a></li>
+                <li><a href="javascript:void(0);">Apartments</a></li>
+                <li><a href="javascript:void(0);">Offices</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0);">Members</a>
+              <ul class="dropdown-content">
+                <li><a href="javascript:void(0);">Amazon</a></li>
+                <li><a href="javascript:void(0);">Dropcam</a></li>
+                <li><a href="javascript:void(0);">Logitech</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0);">Blog</a>
+              <ul class="dropdown-content">
+                <li><a href="javascript:void(0);">Design</a></li>
+                <li><a href="javascript:void(0);">Location</a></li>
+                <li><a href="javascript:void(0);">Structures</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0);">Pages</a>
+              <ul class="dropdown-content">
+                <li><a href="javascript:void(0);">Pricing Plans</a></li>
+                <li><a href="javascript:void(0);">Our Services</a></li>
+                <li><a href="javascript:void(0);">Careers</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="header_buttons">
+            <div class="account_mange">
+              <div class="user_img"><i class="fa-regular fa-circle-user"></i></div>
+              <div class="signIn">
+                <a href="javascript:void(0);">Login</a>
+                <span>/</span>
+                <a href="javascript:void(0);">Register</a>
+              </div>
+            </div>
+            <button>Add Property <span>&#8599;</span></button>
+          </div>
+        </div>
+      </div>
     </header>
+    
     <main>
       <!-- -------------- HERO SEC ------------  -->
 
@@ -120,14 +174,14 @@
                 <div class="price-box">
                   <label for="price">Price</label>
                   <div class="price_range">
-                    <input type="text" id="min-price" placeholder="$0" />
+                    <input type="number" id="min-price" placeholder="$0" />
                     <span>-</span>
-                    <input type="text" id="max-price" placeholder="$5000" />
+                    <input type="number" id="max-price" placeholder="$5000" />
                   </div>
                 </div>
                 <div class="advanced">
                   <span class="muted-text">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-sliders"></i>
                     Advanced
                   </span>
                 </div>
@@ -162,7 +216,7 @@
               <h1>Discover Our Featured Listings</h1>
               <p>Aliquam lacinia diam quis lacus euismod</p>
             </div>
-            <a href="#">See All Properties <span>&#8599;</span></a>
+            <a href="javascript:void(0);">See All Properties <span>&#8599;</span></a>
           </div>
           <div class="featured_listing_slider_main">
             <div class="featured_listing_slider">
@@ -235,7 +289,6 @@
             <div class="image-column">
               <div class="house">
                 <img src="./assets/public/images/type1.jpg.png" alt="House Image" class="house-image" />
-
                 <div class="text-content">
                   <h3>House</h3>
                   <p>7 Properties</p>
@@ -246,7 +299,6 @@
                 <div class="partOne">
                   <div class="house">
                     <img src="./assets/public/images/type4.jpg.png" alt="House Image" class="house-image" />
-
                     <div class="text-content">
                       <h3>Townhome</h3>
                       <p>2 Properties</p>
@@ -256,7 +308,6 @@
                 <div class="partOne">
                   <div class="house">
                     <img src="./assets/public/images/type5.jpg.png" alt="House Image" class="house-image" />
-
                     <div class="text-content">
                       <h3>Villa</h3>
                       <p>4 Properties</p>
@@ -270,7 +321,6 @@
                 <div class="partOne">
                   <div class="house">
                     <img src="./assets/public/images/type2.jpg.png" alt="House Image" class="house-image" />
-
                     <div class="text-content">
                       <h3>Apartments</h3>
                       <p>3 Properties</p>
@@ -280,7 +330,6 @@
                 <div class="partOne">
                   <div class="house">
                     <img src="./assets/public/images/type3.jpg.png" alt="House Image" class="house-image" />
-
                     <div class="text-content">
                       <h3>Office</h3>
                       <p>4 Properties</p>
@@ -291,7 +340,6 @@
 
               <div class="house">
                 <img src="./assets/public/images/type6.jpg.png" alt="House Image" class="house-image" />
-
                 <div class="text-content">
                   <h3>Bungalow</h3>
                   <p>1 Properties</p>
@@ -315,7 +363,7 @@
           <div class="customer_cards">
             <div class="card">
               <div class="card_img">
-                <img src="./assets/public/images/icon.png" alt="" />
+                <img src="./assets/public/images/icon.png" alt="Find Home Icon" />
               </div>
               <div class="card_text">
                 <h2>Buy a property</h2>
@@ -326,7 +374,7 @@
             </div>
             <div class="card">
               <div class="card_img">
-                <img src="./assets/public/images/icon2.png" alt="" />
+                <img src="./assets/public/images/icon2.png" alt="Find Home Icon" />
               </div>
               <div class="card_text">
                 <h2>Sell a property</h2>
@@ -337,7 +385,7 @@
             </div>
             <div class="card">
               <div class="card_img">
-                <img src="./assets/public/images/icon3.png" alt="" />
+                <img src="./assets/public/images/icon3.png" alt="Find Home Icon" />
               </div>
               <div class="card_text">
                 <h2>Rent a property</h2>
@@ -359,13 +407,13 @@
               <h1>Explore Apartment Types</h1>
               <p>Lorem ipsum dolor sit amet,</p>
             </div>
-            <a href="#">All Types <span>&#8599;</span></a>
+            <a href="javascript:void(0);">All Types <span>&#8599;</span></a>
           </div>
           <div class="apartment_slider_main">
             <div class="item">
               <div class="item_main">
                 <div class="item_img">
-                  <img src="./assets/public/images/h4-t1.jpg.png" alt="" />
+                  <img src="./assets/public/images/h4-t1.jpg.png" alt="apartment_types" />
                 </div>
                 <div class="item_text">
                   <h3>House</h3>
@@ -377,7 +425,7 @@
             <div class="item">
               <div class="item_main">
                 <div class="item_img">
-                  <img src="./assets/public/images/h4-t2.jpg.png" alt="" />
+                  <img src="./assets/public/images/h4-t2.jpg.png" alt="apartment_types" />
                 </div>
                 <div class="item_text">
                   <h3>Aoartments</h3>
@@ -388,7 +436,7 @@
             <div class="item">
               <div class="item_main">
                 <div class="item_img">
-                  <img src="./assets/public/images/h4-t3.jpg.png" alt="" />
+                  <img src="./assets/public/images/h4-t3.jpg.png" alt="apartment_types" />
                 </div>
                 <div class="item_text">
                   <h3>Office</h3>
@@ -399,7 +447,7 @@
             <div class="item">
               <div class="item_main">
                 <div class="item_img">
-                  <img src="./assets/public/images/h4-t4.jpg.png" alt="" />
+                  <img src="./assets/public/images/h4-t4.jpg.png" alt="apartment_types" />
                 </div>
                 <div class="item_text">
                   <h3>Villa</h3>
@@ -410,7 +458,7 @@
             <div class="item">
               <div class="item_main">
                 <div class="item_img">
-                  <img src="./assets/public/images/h4-t5.jpg.png" alt="" />
+                  <img src="./assets/public/images/h4-t5.jpg.png" alt="apartment_types" />
                 </div>
                 <div class="item_text">
                   <h3>Townhome</h3>
@@ -421,7 +469,7 @@
             <div class="item">
               <div class="item_main">
                 <div class="item_img">
-                  <img src="./assets/public/images/h4-t3.jpg.png" alt="" />
+                  <img src="./assets/public/images/h4-t3.jpg.png" alt="apartment_types" />
                 </div>
                 <div class="item_text">
                   <h3>Villa</h3>
@@ -552,7 +600,410 @@
           </div>
         </div>
       </section>
+
+      <!-- -------------- BEST DEALS SECTION start   ------------  -->
+
+      <section class="best_deal">
+        <div class="container">
+          <div class="title">
+            <div class="title_text">
+              <h1>Discover Our Best Deals</h1>
+              <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+            <div class="best_deal_tabs">
+              <button class="tab_button active" data-tab="for_rent">For Rent</button>
+              <button class="tab_button" data-tab="for_sale">For Sale</button>
+            </div>
+          </div>
+          <div class="best_deal_tab_content">
+            <div class="tab_content" id="for_rent">
+              <div class="deal_card">
+                <div class="deal_card_main">
+                  <div class="deal_card_img">
+                    <img src="./assets/public/images/p14-570x370.jpg.png" alt="best_deal">
+                  </div>
+                  <div class="deal_card_text">
+                    <h3>Luxury Family Home</h3>
+                    <div class="deal_card_detail">
+                      <span>$5,800</span>
+                      <div class="iconsNumbers">
+                        <span><i class="fa-solid fa-bed"></i> 6</span>
+                        <span><i class="fa-solid fa-shower"></i> 2</span>
+                        <span><i class="fa-solid fa-up-right-from-square"></i> 300</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal_card">
+                <div class="deal_card_main">
+                  <div class="deal_card_img">
+                    <img src="./assets/public/images/p1-570x370.jpg.png" alt="best_deal">
+                  </div>
+                  <div class="deal_card_text">
+                    <h3>Gorgeous Villa Bay</h3>
+                    <div class="deal_card_detail">
+                      <span>$4,800</span>
+                      <div class="iconsNumbers">
+                        <span><i class="fa-solid fa-bed"></i> 8</span>
+                        <span><i class="fa-solid fa-shower"></i> 2</span>
+                        <span><i class="fa-solid fa-up-right-from-square"></i> 300</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal_card">
+                <div class="deal_card_main">
+                  <div class="deal_card_img">
+                    <img src="./assets/public/images/p4-570x370.jpg.png" alt="best_deal">
+                  </div>
+                  <div class="deal_card_text">
+                    <h3>Skyper Pool Apartment</h3>
+                    <div class="deal_card_detail">
+                      <span>$2,850</span>
+                      <div class="iconsNumbers">
+                        <span><i class="fa-solid fa-bed"></i> 4</span>
+                        <span><i class="fa-solid fa-shower"></i> 1</span>
+                        <span><i class="fa-solid fa-up-right-from-square"></i> 200</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal_card">
+                <div class="deal_card_main">
+                  <div class="deal_card_img">
+                    <img src="./assets/public/images/p13-570x370.jpg.png" alt="best_deal">
+                  </div>
+                  <div class="deal_card_text">
+                    <h3>Diamond Manor Apartment</h3>
+                    <div class="deal_card_detail">
+                      <span>$3,500</span>
+                      <div class="iconsNumbers">
+                        <span><i class="fa-solid fa-bed"></i> 3</span>
+                        <span><i class="fa-solid fa-shower"></i> 1</span>
+                        <span><i class="fa-solid fa-up-right-from-square"></i> 200</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content" id="for_sale">
+              <div class="deal_card">
+                <div class="deal_card_main">
+                  <div class="deal_card_img">
+                    <img src="./assets/public/images/p13-570x370.jpg.png" alt="best_deal">
+                  </div>
+                  <div class="deal_card_text">
+                    <h3>Diamond Manor Apartment</h3>
+                    <div class="deal_card_detail">
+                      <span>$3,500</span>
+                      <div class="iconsNumbers">
+                        <span><i class="fa-solid fa-bed"></i> 3</span>
+                        <span><i class="fa-solid fa-shower"></i> 1</span>
+                        <span><i class="fa-solid fa-up-right-from-square"></i> 200</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal_card">
+                <div class="deal_card_main">
+                  <div class="deal_card_img">
+                    <img src="./assets/public/images/p4-570x370.jpg.png" alt="best_deal">
+                  </div>
+                  <div class="deal_card_text">
+                    <h3>Skyper Pool Apartment</h3>
+                    <div class="deal_card_detail">
+                      <span>$2,850</span>
+                      <div class="iconsNumbers">
+                        <span><i class="fa-solid fa-bed"></i> 4</span>
+                        <span><i class="fa-solid fa-shower"></i> 1</span>
+                        <span><i class="fa-solid fa-up-right-from-square"></i> 200</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal_card">
+                <div class="deal_card_main">
+                  <div class="deal_card_img">
+                    <img src="./assets/public/images/p1-570x370.jpg.png" alt="best_deal">
+                  </div>
+                  <div class="deal_card_text">
+                    <h3>Gorgeous Villa Bay</h3>
+                    <div class="deal_card_detail">
+                      <span>$4,800</span>
+                      <div class="iconsNumbers">
+                        <span><i class="fa-solid fa-bed"></i> 8</span>
+                        <span><i class="fa-solid fa-shower"></i> 2</span>
+                        <span><i class="fa-solid fa-up-right-from-square"></i> 300</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="deal_card">
+                <div class="deal_card_main">
+                  <div class="deal_card_img">
+                    <img src="./assets/public/images/p14-570x370.jpg.png" alt="best_deal">
+                  </div>
+                  <div class="deal_card_text">
+                    <h3>Luxury Family Home</h3>
+                    <div class="deal_card_detail">
+                      <span>$5,800</span>
+                      <div class="iconsNumbers">
+                        <span><i class="fa-solid fa-bed"></i> 6</span>
+                        <span><i class="fa-solid fa-shower"></i> 2</span>
+                        <span><i class="fa-solid fa-up-right-from-square"></i> 300</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- BLOG SECTION start   ------------  -->
+      <section class="blog_section">
+        <div class="container">
+          <div class="title">
+            <div class="title_text">
+              <h1>From Our Blog</h1>
+              <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+          </div>
+          <div class="blog_card_sec">
+            <div class="blog_card">
+              <div class="blog_card_main">
+                <div class="blog_img">
+                  <img src="./assets/public/images/featured_img3.png" alt="Blog">
+                </div>
+                <div class="blog_text">
+                  <div class="date">
+                    <span>Feb</span>
+                    <h2>03</h2>
+                  </div>
+                  <div class="blog_details">
+                    <span>Townhome</span>
+                  <h3>Unveils the Best Canadian Cities for Biking and
+                    Walk</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blog_card">
+              <div class="blog_card_main">
+                <div class="blog_img">
+                  <img src="./assets/public/images/featured_img2.png" alt="Blog">
+                </div>
+                <div class="blog_text">
+                  <div class="date">
+                    <span>Feb</span>
+                    <h2>03</h2>
+                  </div>
+                  <div class="blog_details">
+                    <span>Villa</span>
+                  <h3>Diamond Manor Apartment in the New York and
+                    Service</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blog_last_card">
+              <div class="blog_last_card_main">
+                <div class="blog_item">
+                  <div class="blog_item_img">
+                    <img src="./assets/public/images/featured_img1.png" alt="Blog_item">
+                  </div>
+                  <div class="blog_item_text">
+                    <p>Townhome</p>
+                    <h3>7 Simple Ways to Keep
+                      Your Kids’ Toys From…</h3>
+                    <span>February 3, 2023</span>
+                  </div>
+                </div>
+                <div class="blog_item">
+                  <div class="blog_item_img">
+                    <img src="./assets/public/images/featured_img.png" alt="Blog_item">
+                  </div>
+                  <div class="blog_item_text">
+                    <p>Houses</p>
+                    <h3>Housing Markets That
+                      Changed the Most This…</h3>
+                    <span>February 3, 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- brand slider SECTION start   ------------  -->
+
+
+      <section class="brand_slider_sec">
+        <div class="container">
+          <div class="title">
+            <div class="title_text">
+              <p>Trusted by the world’s best</p>
+            </div>
+          </div>
+          <div class="brand_slider">
+            <div class="brand_slider_main">
+                <div class="brand_logo">
+                  <img src="./assets/public/images/brand_logo.png" alt="Brand_logo">
+                </div>
+                <div class="brand_logo">
+                  <img src="./assets/public/images/brand_logo1.png" alt="Brand_logo">
+                </div>
+                <div class="brand_logo">
+                  <img src="./assets/public/images/brand_logo2.png" alt="Brand_logo">
+                </div>
+                <div class="brand_logo">
+                  <img src="./assets/public/images/brand_logo3.png" alt="Brand_logo">
+                </div>
+                <div class="brand_logo">
+                  <img src="./assets/public/images/brand_logo4.png" alt="Brand_logo">
+                </div>
+                <div class="brand_logo">
+                  <img src="./assets/public/images/brand_logo5.png" alt="Brand_logo">
+                </div>
+                <div class="brand_logo">
+                  <img src="./assets/public/images/brand_logo2.png" alt="Brand_logo">
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
     </main>
+
+    <footer>
+        <div class="container">
+          <div class="title">
+            <div class="title_text">
+              <h1>Subscribe Our Newsletter</h1>
+              <p>We don’t send spam so don’t worry.</p>
+            </div>
+            <div class="input-container">
+              <input type="text" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+          <div class="footer_main">
+            <div class="footer_items footer_logo_box">
+              <div class="footer_logo">
+                <img src="./assets/public/images/logo.png" alt="Footer_logo">
+              </div>
+              <div class="footer_details">
+                <div class="footer_address">
+                  <p>Address</p>
+                  <h3>789 Queensberry Street, North
+                    Melbourne VIC 3051, Australia.</h3>
+                </div>
+                <div class="footer_phone">
+                  <p>Total Free Customer Care</p>
+                  <h3>+(088) 123 456 789</h3>
+                </div>
+                <div class="footer_mail">
+                  <p>Live Support?</p>
+                  <h3>hi@homez.com</h3>
+                </div>
+              </div>
+            </div>
+            <div class="footer_items footer_menu_main">
+                <div class="footer_menu">
+                  <div class="footer_menu_left">
+                    <h3>Popular Search</h3>
+                    <div class="footer_menu_items">
+                      <ul>
+                        <li>
+                          <a href="">Apartment for Sale</a>
+                        </li>
+                        <li>
+                          <a href="">Apartment for Rent</a>
+                        </li>
+                        <li>
+                          <a href="">Office for Sale</a>
+                        </li>
+                        <li>
+                          <a href="">Office for Rent</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="footer_menu_right">
+                    <h3>Quick Links</h3>
+                    <div class="footer_menu_items">
+                      <ul>
+                        <li>
+                          <a href="">Terms of Use</a>
+                        </li>
+                        <li>
+                          <a href="">Priacy Policy</a>
+                        </li>
+                        <li>
+                          <a href="">Pricing Plans</a>
+                        </li>
+                        <li>
+                          <a href="">Our Services</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="footer_items">
+              <div class="footer_apps">
+                <h3>Apps</h3>
+                <div class="footer_apps_details">
+                    <div class="apps_detail_main">
+                      <div class="device_logo">
+                        <span><i class="fa-brands fa-apple"></i></span>
+                      </div>
+                      <div class="device_name">
+                        <p>Download on the</p>
+                        <h4>Apple Store</h4>
+                      </div>
+                    </div>
+                    <div class="apps_detail_main">
+                      <div class="device_logo">
+                        <span><i class="fa-brands fa-google-play"></i></span>
+                      </div>
+                      <div class="device_name">
+                        <p>Get in on</p>
+                        <h4>Google Play</h4>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="footer_bottom_main">
+              <div class="copywrite">
+                <span>&copy; Homez – All rights reserved</span>
+              </div>
+              <div class="footer_social">
+                <p>Follow us</p>
+                <a href=""><span><i class="fa-brands fa-facebook-f"></i></span></a>
+                <a href=""><span><i class="fa-brands fa-twitter"></i></span></a>
+                <a href=""><span><i class="fa-brands fa-instagram"></i></span></a>
+                <a href="">
+                  <span><i class="fa-brands fa-linkedin-in"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
 
     <!-- ---------------------------- Script Start ---------------------------  -->
     <!-- -------------- jquery start --------------  -->

@@ -26,6 +26,11 @@
             display: flex;
             justify-content: center;
 
+            @media (max-width: 425px) {
+               flex-direction: column;
+              
+            }
+
             .submit_btn{
                 @include fill_Button()
             }
@@ -34,6 +39,16 @@
             }
 
         }
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .banner_section {
+        .banner_main {
+            width: 100%;
+        }
+    
     }
     
 }
