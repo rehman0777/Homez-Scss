@@ -1,3 +1,4 @@
+// ================ color var ===============
 $white-clr : #FFFFFF;
 $pink-clr : #EB6753;
 $pink-dark-clr : #d34933;
@@ -5,4 +6,65 @@ $black-clr : #181A20;
 $text-clr : #717171;
 $bg-clr : #F7F7F7;
 $footer-text-clr : #BEBDBD;
+
+// ============== border var ================
 $border-radius: 12px;
+$box_sizing_border_box: border-box;
+$box_sizing_inherit: inherit;
+$border_none: none;
+$outline_none: none;
+
+// ===================  Flex & grid var ================
+$display_flex : flex;
+$space_between: space-between;
+$space_around: space-around;
+$space_evenly: space-evenly;
+$flex_center: center;
+$flex_start: start;
+$flex_end: end;
+$flex_wrap: wrap;
+$flex_nowrap: nowrap;
+$flex_direction_column: column;
+$flex_direction_row: row;
+$display_grid: grid;
+
+// ================== display var ================
+$display_block : block;
+$display_none : none;
+$display_inline_block : inline-block;
+
+// ================= position var ================
+$absolute: absolute;
+$relative: relative;
+$fixed: fixed;
+
+// ==================== text var ================
+
+$text_align_center: center;
+$text_align_right: right;
+$text_align_left: left;
+$text_transform_uppercase: uppercase;
+$text_transform_capitalize: capitalize;
+$text_transform_lowercase: lowercase;
+
+// ==================== text style var ====================
+
+$text_decoration_underline: underline;
+$text_decoration_none: none;
+$list_style_none: none;
+$cursor_pointer: pointer;
+$appearance_none: none;
+$pointer_events_none: none;
+
+// ============== width height ================
+$width_fit_content: fit-content;
+$height_max_content: max-content;
+
+// ============== style ================
+$overflow_hidden : hidden;
+$scroll_behavior_smooth: smooth;
+
+// ============== background ================
+$background_color_transparent: transparent;
+$background_repeat_repeat: repeat;
+$background_size_cover: cover;

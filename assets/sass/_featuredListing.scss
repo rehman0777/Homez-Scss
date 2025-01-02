@@ -1,87 +1,81 @@
 @use "./abstracts/variables" as *;
 @use "./abstracts/mixins" as *;
 
+.featured_Listings {
+  background-color: $bg-clr;
+  padding: 150px 0px 60px 0px;
 
-.featured_Listings{
-    background-color: $bg-clr;
-    padding: 150px 0px 60px 0px;
-    .title{
-        justify-content: space-between;
+  .title {
+    justify-content: $space_between;
 
-        .title_text{
-            p,
-            h1{
-                text-align: left
-            }
-            a{
-                @include typography(15px, 28px,);
-                color: $black-clr;
-        
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
-        }
+    @media (max-width: 768px) {
+      flex-direction: $flex_direction_column;
+      align-items: $flex_center;
     }
-    .card{
-        margin-bottom: 30px;
-        .card_main{
-            width: 95%;
-            border-radius: $border-radius;
-            z-index: 999;
-            overflow: hidden;
 
-            .card_img{
-                position: relative;
-                img{
-                    width: 100%;
-                }
-                p{
-                    position: absolute;
-                    top: 15px;
-                    left: 15px;
-                    @include typography();
-                    background-color: $pink-clr;
-                    color: $white-clr;
-                    border-radius: $border-radius - 6;
-                    padding: 0px 20px;
-                    text-transform: uppercase;
-                }
-            }
-            .card_text{
-                background-color: $white-clr;
-                padding: 15px;
+    .title_text {
+      p,
+      h1 {
+        text-align: $text_align_left;
 
-                span{
-                    color: $pink-clr;
-                    @include typography(15px, 30px,)
-                }
-            }
-           
+        @media (max-width: 768px) {
+          text-align: $text_align_center;
         }
+      }
 
-    }
-}
+      a {
+        @include typography(15px, 28px);
+        color: $black-clr;
 
-@media (max-width: 768px) {
-    .featured_Listings{
-        .title{
-            flex-direction: column;
-            align-items: center;
-            .title_text {
-                p,h1{
-                    text-align: center;
-                }
-            }
+        &:hover {
+          text-decoration: $text_decoration_underline;
         }
-    }
-}
-@media (max-width: 600px) {
-    .featured_Listings {
-        .card{
-            .card_main {
-               width: 100%;
-            }
-        }
+      }
     }
   }
+
+  .card {
+    margin-bottom: 30px;
+
+    .card_main {
+      width: 95%;
+      border-radius: $border-radius;
+      z-index: 999;
+      overflow: $overflow_hidden;
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+
+      .card_img {
+        position: $relative;
+
+        img {
+          width: 100%;
+        }
+
+        p {
+          position: $absolute;
+          top: 15px;
+          left: 15px;
+          @include typography();
+          background-color: $pink-clr;
+          color: $white-clr;
+          border-radius: $border-radius - 6;
+          padding: 0px 20px;
+          text-transform: $text_transform_uppercase;
+        }
+      }
+
+      .card_text {
+        background-color: $white-clr;
+        padding: 15px;
+
+        span {
+          color: $pink-clr;
+          @include typography(15px, 30px);
+        }
+      }
+    }
+  }
+}

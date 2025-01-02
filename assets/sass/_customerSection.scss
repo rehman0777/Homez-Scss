@@ -1,74 +1,57 @@
 @use "./abstracts/variables" as *;
 @use "./abstracts/mixins" as *;
 
+.customer_sec {
+  background-color: #eb67531a;
 
-
-.customer_sec{
-    background-color: #EB67531A;
-    .title_text{
-        p{
-            text-align: center;
-        }
+  .title_text {
+    p {
+      text-align: $text_align_center;
     }
-    .customer_cards{
+  }
+
+  .customer_cards {
+    width: 100%;
+    display: $display_flex;
+    justify-content: $space_between;
+    flex-wrap: $flex_wrap;
+    gap: 0px;
+
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+
+    .card {
+      width: 32%;
+      background-color: $white-clr;
+      border-radius: $border-radius;
+      padding: 30px 20px 40px 20px;
+      display: $display_flex;
+      flex-direction: $flex_direction_column;
+      align-items: $flex_center;
+
+      @media (max-width: 768px) {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 0px; 
+      }
 
-        .card{
-            width: 32%;
-            background-color: $white-clr;
-            border-radius: $border-radius;
-            padding: 30px 20px 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
+      .card_text {
+        text-align: $text_align_center;
+        margin: 20px 0px;
 
-            .card_text{
-                text-align: center;
-                margin: 20px 0px;
-
-                p{
-                    font-weight: 400;
-                    text-align: center;
-                    color: $black-clr;
-                }
-            }
-
-            button{
-                @include outline_Button();
-                span{
-                    margin-left: 2px;
-                }
-            }
+        p {
+          font-weight: 400;
+          text-align: $text_align_center;
+          color: $black-clr;
         }
-    }
-}
+      }
 
-@media (max-width: 768px) {
-    .customer_sec{
-        .customer_cards{
-            gap: 20px;
-    
-            .card{
-                width: 46%;
-            }
+      button {
+        @include outline_Button();
+
+        span {
+          margin-left: 2px;
         }
+      }
     }
-    
-}
-@media (max-width: 600px) {
-    .customer_sec{
-        .customer_cards{
-            gap: 20px;
-    
-            .card{
-                width: 100%;
-            }
-        }
-    }
-    
+  }
 }

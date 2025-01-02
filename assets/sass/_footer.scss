@@ -1,236 +1,232 @@
 @use "./abstracts/variables" as *;
 @use "./abstracts/mixins" as *;
 
+footer {
+  background-color: $black-clr;
+  padding-top: 40px;
+  padding-bottom: 30px;
 
+  .title {
+    flex-direction: $flex_direction_column;
+    align-items: $flex_center;
 
-footer{
-    background-color: $black-clr;
-    padding-top: 40px;
-    padding-bottom: 30px;
+    .title_text {
+      h1 {
+        color: $white-clr;
+      }
+    }
 
-    .title{
-        flex-direction: column;
-        align-items: center;
-        .title_text{
-            h1{
-                color: $white-clr;
-            }
-        }
-        
-        .input-container {
-            position: relative;
-            width: 40%;
-            margin: 20px 0px;
+    .input-container {
+      position: $relative;
+      width: 40%;
+      margin: 20px 0px;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 20px;
+      padding-right: 90px;
+      box-sizing: $box_sizing_border_box;
+      border-radius: $border-radius;
+    }
+
+    .input-container button {
+      position: $absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include fill_Button();
+    }
+  }
+
+  .footer_main {
+    display: $display_flex;
+    justify-content: $space_between;
+    flex-wrap: $flex_wrap;
+    gap: 20px;
+
+    .footer_items {
+      width: 20%;
+
+      @media (max-width: 1240px) {
+        width: 28%;
+      }
+
+      @media (max-width: 1024px) {
+        text-align: $flex_center;
+        width: 100%;
+        margin: 0px auto;
+      }
+
+      .footer_details {
+        margin-top: 20px;
+
+        .footer_mail,
+        .footer_phone,
+        .footer_address {
+          margin-bottom: 15px;
+
+          p {
+            font-weight: 400;
+            color: $white-clr;
+
             @media (max-width: 1024px) {
-                width: 100%;
+              text-align: $text_align_center;
             }
+          }
+
+          h3 {
+            line-height: 24px;
+            color: $white-clr;
+          }
         }
-        
-        .input-container input {
-            width: 100%;
-            padding: 20px;
-            padding-right: 90px;
-            box-sizing: border-box; 
-            border-radius: $border-radius;
+      }
+
+      .footer_menu {
+        display: $display_flex;
+        justify-content: $space_evenly;
+
+        @media (max-width: 1024px) {
+          justify-content: $flex_center;
+          gap: 20px;
+        }
+
+        .footer_menu_left,
+        .footer_menu_right {
+          h3 {
+            color: $white-clr;
+            margin-bottom: 20px;
           }
-          
-          .input-container button {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            @include fill_Button();
+
+          ul li {
+            margin-bottom: 10px;
+
+            a {
+              color: $footer-text-clr;
+              @include typography();
+              font-weight: 400;
+              margin-bottom: 10px;
+
+              &:hover {
+                color: $pink-clr;
+              }
+            }
           }
-          
+        }
+      }
+
+      .footer_apps {
+        h3 {
+          color: $white-clr;
+        }
+
+        .apps_detail_main {
+          display: $display_flex;
+          background-color: #ffffff0a;
+          border-radius: $border-radius;
+          padding: 10px 20px;
+          margin-top: 20px;
+          align-items: $flex_center;
+
+          .device_logo {
+            margin-right: 20px;
+
+            span {
+              font-size: 25px;
+              color: $white-clr;
+            }
+          }
+
+          .device_name {
+            p {
+              color: $white-clr;
+              font-weight: 400;
+            }
+
+            h4 {
+              @include typography();
+              color: $white-clr;
+            }
+          }
+        }
+      }
     }
-    .footer_main{
+
+    .footer_logo_box {
+      width: 25%;
+
+      @media (max-width: 1240px) {
+        width: 28%;
+      }
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    .footer_menu_main {
+      width: 48%;
+
+      @media (max-width: 1240px) {
+        width: 35%;
+      }
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer_bottom {
+    &::before {
+      content: "";
+      background: #ffffff12;
+      width: 100%;
+      height: 1px;
+      display: $display_block;
+      margin: 30px 0px;
+    }
+
+    .footer_bottom_main {
+      display: $display_flex;
+      justify-content: $space_between;
+
+      @media (max-width: 600px) {
+        flex-direction: $flex_direction_column;
+        align-items: $flex_center;
+      }
+
+      .copywrite {
+        @include typography();
+        color: $white-clr;
+        font-weight: 400;
+      }
+
+      .footer_social {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 20px;
-    
-        .footer_items{
-            width: 20%;
+        width: 20%;
 
-            @media (max-width: 1240px) {
-                width: 28%;
-            }
-
-
-
-            .footer_details{
-                margin-top: 20px;
-                .footer_mail,
-                .footer_phone,
-                .footer_address{
-                    margin-bottom: 15px;
-
-                    p{
-                        font-weight: 400;
-                        color: $white-clr;
-                    }
-                    h3{
-                        line-height: 24px;
-                        color: $white-clr;
-                    }
-                }
-                
-            }
-            .footer_menu{
-                display: flex;
-                justify-content: space-evenly;
-
-                
-                .footer_menu_left,
-                .footer_menu_right{
-                    h3{
-                        color: $white-clr;
-                        margin-bottom: 20px;
-                    }
-                    ul li{
-                        margin-bottom: 10px;
-
-                        a{
-                            color: $footer-text-clr;
-                            @include typography();
-                            font-weight: 400;
-                            margin-bottom: 10px;
-
-                            &:hover{
-                                color: $pink-clr;
-                            }
-                        }
-                    }
-                }
-            }
-            .footer_apps{
-                h3{
-                    color: $white-clr;
-                }
-                .apps_detail_main{
-                    display: flex;
-                    background-color: #FFFFFF0A;
-                    border-radius: $border-radius;
-                    padding: 10px 20px;
-                    margin-top: 20px;
-                    align-items: center;
-
-                    .device_logo{
-                        margin-right: 20px;
-                        span{
-                            font-size: 25px;
-                            color: $white-clr;
-                        }
-                    }
-                    .device_name{
-
-                        p{
-                            color: $white-clr;
-                            font-weight: 400;
-                        }
-                        h4{
-                            @include typography();
-                            color: $white-clr;
-                        }
-                    }
-                }
-            }
-        }
-        .footer_logo_box{
-            width: 25%;
-            @media (max-width: 1240px) {
-                width: 28%;
-            }
-        }
-        .footer_menu_main{
-            width: 48%;
-            @media (max-width: 1240px) {
-                width: 35%;
-            }
+        @media (max-width: 768px) {
+          width: 30%;
         }
 
-       
-        
+        @media (max-width: 600px) {
+          width: 50%;
+        }
+
+        justify-content: $space_between;
+        color: $white-clr;
+
+        a {
+          color: $white-clr;
+          @include typography();
+          font-weight: 400;
+        }
+      }
     }
-    .footer_bottom{
-        &::before{
-            content: "";
-             background: #FFFFFF12;
-             width: 100%;
-             height: 1px;
-             display: block;
-             margin: 30px 0px;
-        }
-
-        .footer_bottom_main{
-            display: flex;
-            justify-content: space-between;
-            @media  (max-width: 600px) {
-                flex-direction: column;
-                align-items: center;
-            }
-    
-            .copywrite{
-                @include typography();
-                color: $white-clr;
-                font-weight: 400;
-            }
-            .footer_social{
-                display: flex;
-                width: 20%;
-                @media (max-width: 768px) {
-                            width: 30%;
-                        }
-                        @media  (max-width: 600px) {
-                        width: 50%;
-                    }
-                justify-content: space-between;
-                color: $white-clr;
-                
-                
-                a{
-                    color: $white-clr;
-                    @include typography();
-                font-weight: 400;
-                }
-            }
-        }
-    }
+  }
 }
-
-@media (max-width: 1024px) {
-    footer {
-        .footer_main {
-            .footer_logo_box {
-                width: 100%;
-            }
-             .footer_menu_main {
-                width: 100%;
-            }
-            .footer_items {
-                text-align: center;
-                width: 100%;
-                margin: 0px auto;
-                
-                .footer_details {
-                    .footer_mail p,
-                    .footer_phone p,
-                    .footer_address p {
-                        text-align: center;
-                    }
-                }
-                .footer_menu {
-                    justify-content: center;
-                    gap: 200px;
-                    
-                    @media (max-width: 1024px) {
-                        gap: 20px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-  

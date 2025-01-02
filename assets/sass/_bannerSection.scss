@@ -1,54 +1,50 @@
 @use "./abstracts/variables" as *;
 @use "./abstracts/mixins" as *;
 
-
-.banner_section{
-    background: url(../public/images/banner.png);
-    @include backgroundImage();
-    padding: 180px 0px;
-    .banner_main{
-        width: 80%;
-        margin: 0px auto;
-        text-align: center;
-
-        p{
-            text-align: center;
-            color: $white-clr;
-            font-weight: 400;
-        }
-        h1{
-            color: $white-clr;
-            line-height: 48px;
-        }
-        .banner_btns{
-            margin-top: 20px;
-            gap: 20px;
-            display: flex;
-            justify-content: center;
-
-            @media (max-width: 425px) {
-               flex-direction: column;
-              
-            }
-
-            .submit_btn{
-                @include fill_Button()
-            }
-            .browser_btn{
-                @include fill_Button( $black-clr, $white-clr, $white-clr, $black-clr, $bg-clr, $bg-clr,)
-            }
-
-        }
+.banner_section {
+  background: url(../public/images/banner.png);
+  @include backgroundImage();
+  padding: 180px 0px;
+  .banner_main {
+    width: 80%;
+    margin: 0px auto;
+    text-align: $text_align_center;
+    @media (max-width: 768px) {
+      width: 100%;
     }
-    
-}
 
-@media (max-width: 768px) {
-    .banner_section {
-        .banner_main {
-            width: 100%;
-        }
-    
+    p {
+      text-align: $text_align_center;
+      color: $white-clr;
+      font-weight: 400;
     }
-    
+    h1 {
+      color: $white-clr;
+      line-height: 48px;
+    }
+    .banner_btns {
+      margin-top: 20px;
+      gap: 20px;
+      display: $display_flex;
+      justify-content: $flex_center;
+
+      @media (max-width: 425px) {
+        flex-direction: $flex_direction_column;
+      }
+
+      .submit_btn {
+        @include fill_Button();
+      }
+      .browser_btn {
+        @include fill_Button(
+          $black-clr,
+          $white-clr,
+          $white-clr,
+          $black-clr,
+          $bg-clr,
+          $bg-clr
+        );
+      }
+    }
+  }
 }

@@ -1,117 +1,113 @@
 @use "./abstracts/variables" as *;
 @use "./abstracts/mixins" as *;
 
-.best_deal{
-    background-color: $pink-clr;
-    .title {
-      justify-content: space-between;
+.best_deal {
+  background-color: $pink-clr;
+  .title {
+    justify-content: $space_between;
+    @media (max-width: 768px) {
+      flex-direction: $flex_direction_column;
+      align-items: $flex_center;
+    }
 
-      .title_text{
-        h1,p{
-            color: $white-clr
+    .title_text {
+      h1,
+      p {
+        color: $white-clr;
+        @media (max-width: 768px) {
+          text-align: $text_align_center;
         }
       }
-  
-      .best_deal_tabs {
-        .tab_button {
-          @include fill_Button($btn-bg-color:#FFFFFF1A, $hover-btn-bg-color: $white-clr, 
+    }
+
+    .best_deal_tabs {
+      .tab_button {
+        @include fill_Button(
+          $btn-bg-color: #ffffff1a,
+          $hover-btn-bg-color: $white-clr,
           $hover-btn-color: $pink-clr,
-          $hover-border-clr: $white-clr, );
-  
-          &.active {
-            background: $white-clr;
-            color: $pink-clr;
-          }
-  
-         
-        }
-      }
-    }
-  
-    .best_deal_tab_content {
-      margin-top: 2rem;
-      
-      .tab_content {
-        display: none;
-  
+          $hover-border-clr: $white-clr
+        );
+
         &.active {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-        }
-  
-        .deal_card {
-          margin-bottom: 40px;
-          transition: transform 0.3s ease;
-          width: 23%;
-          height: max-content;
-          border-radius: $border-radius;
-          overflow: hidden;
-          box-shadow: 0px 1px 4px 0px #181A2012;
-          
-          @media (max-width: 1200px) {
-              width: 30%;}
-              @media (max-width: 1024px) {
-                width: 48%;}
-          &:hover {
-            transform: translateY(-5px);
-          }
-          .deal_card_main{
-              background-color: $white-clr;
-          }
-
-            .deal_card_img{
-                img{
-                    width: 100%;
-                }
-              }
-            .deal_card_text{
-                padding: 5px 15px 20px 15px;
-                flex-wrap: nowrap;
-
-                h3{
-                    line-height: 25px;
-                }
-
-                .deal_card_detail{
-                    display: flex;
-                    justify-content: space-between;
-                    @include typography();
-                    >span{
-                        color: $pink-clr
-                    };
-
-                    .iconsNumbers{                
-                        span{
-                            margin-left: 10px;
-                            font-weight: 400;
-                            
-                        }
-                    }
-                }
-            }  
+          background: $white-clr;
+          color: $pink-clr;
         }
       }
     }
   }
 
-  @media (max-width: 768px) {
-    .best_deal{
-        .title{
-            flex-direction: column;
-            align-items: center;
-            .title_text {
-                p{
-                    text-align: center;
-                }
-            }
+  .best_deal_tab_content {
+    margin-top: 2rem;
+
+    .tab_content {
+      display: $display_none;
+
+      &.active {
+        display: $display_flex;
+        justify-content: $space_between;
+        flex-wrap: $flex_wrap;
+      }
+
+      .deal_card {
+        margin-bottom: 40px;
+        transition: transform 0.3s ease;
+        width: 23%;
+        height: $height_max_content;
+        border-radius: $border-radius;
+        overflow: $overflow_hidden;
+        box-shadow: 0px 1px 4px 0px #181a2012;
+
+        @media (max-width: 1200px) {
+          width: 30%;
         }
+        @media (max-width: 1024px) {
+          width: 48%;
+        }
+        @media (max-width: 600px) {
+          width: 100%;
+        }
+        &:hover {
+          transform: translateY(-5px);
+        }
+        .deal_card_main {
+          background-color: $white-clr;
+        }
+
+        .deal_card_img {
+          img {
+            width: 100%;
+          }
+        }
+        .deal_card_text {
+          padding: 5px 15px 20px 15px;
+          flex-wrap: $flex_nowrap;
+          height: 100px;
+          display: $display_flex;
+          flex-direction: $flex_direction_column;
+          justify-content: $space_around;
+
+          h3 {
+            line-height: 25px;
+          }
+
+          .deal_card_detail {
+            display: $display_flex;
+            justify-content: $space_between;
+            @include typography();
+            > span {
+              color: $pink-clr;
+            }
+
+            .iconsNumbers {
+              span {
+                margin-left: 10px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
     }
   }
-  @media (max-width: 600px) {
-    .best_deal .best_deal_tab_content .tab_content .deal_card {
-        width: 100%;
-    }
 }
-  
- 
