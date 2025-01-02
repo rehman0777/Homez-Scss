@@ -33,11 +33,39 @@ header {
   .hamburger {
     display: $display_none;
     cursor: $cursor_pointer;
-    font-size: 30px;
-    color: $white-clr;
+    width: 30px; 
+    height: 25px; 
+    position: $relative;
 
     @media (max-width: 1024px) {
       display: $display_block;
+    }
+    .line {
+      position: $absolute;
+      height: 3px; 
+      background-color: $white-clr; 
+      transition: all 0.3s ease; 
+    }
+    
+   
+    .line1 {
+      top: 0;
+      width: 100%;
+      right: 0;
+    }
+  
+    .line2 {
+      top: 50%;
+      width: 70%;
+      right: 0;
+    }
+    &:hover {
+      .line1 {
+        width: 70%; 
+      }
+      .line2 {
+        width: 80%; 
+      }
     }
   }
 

@@ -143,13 +143,36 @@ header {
 .navbar .hamburger {
   display: none;
   cursor: pointer;
-  font-size: 30px;
-  color: #FFFFFF;
+  width: 30px;
+  height: 25px;
+  position: relative;
 }
 @media (max-width: 1024px) {
   .navbar .hamburger {
     display: block;
   }
+}
+.navbar .hamburger .line {
+  position: absolute;
+  height: 3px;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+.navbar .hamburger .line1 {
+  top: 0;
+  width: 100%;
+  right: 0;
+}
+.navbar .hamburger .line2 {
+  top: 50%;
+  width: 70%;
+  right: 0;
+}
+.navbar .hamburger:hover .line1 {
+  width: 70%;
+}
+.navbar .hamburger:hover .line2 {
+  width: 80%;
 }
 .navbar > ul {
   display: flex;
